@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>学校管理</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+			<tk:SingleXmlMetaData DataXml="School/School.xml"/>
+		</tk:MetaData>
+		<tk:Source>
+			<tk:SingleDbSource>
+				<tk:Resolver>
+					<tk:MetaDataResolver AutoTrackField="true" AutoUpdateKey="true">
+						<tk:Scheme>
+							<tk:Tk5DataXml FileName="School/School.xml"/>
+						</tk:Scheme>
+					</tk:MetaDataResolver>
+				</tk:Resolver>
+			</tk:SingleDbSource>
+		</tk:Source>
+		<tk:PageMaker>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="Single"/>
+		</tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>

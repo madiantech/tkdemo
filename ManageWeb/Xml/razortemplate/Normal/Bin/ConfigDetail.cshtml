@@ -1,0 +1,78 @@
+﻿@inherits YJC.Toolkit.Razor.ListTemplatePage<TModel>
+@using System.Collections.Generic;
+@using System.Web;
+@using System.Text;
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    ConfigFactoryData factoryData = (ConfigFactoryData)Model;
+    var info = factoryData.FactoryInfo;
+    var plugIns = factoryData.PlugIns;
+    int index = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@(info.Description)详细信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap-theme.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/font-awesome.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/style.css".AppVirutalPath())" />
+    <style>
+        th {
+            word-break: keep-all
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fuild m10">
+        <h1>@info.Description</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>注册名</th>
+                    <th>作者</th>
+                    <th>创建时间</th>
+                    <th>描述</th>
+                    <th>对象类型</th>
+                    <th>文件</th>
+                    <th>命名空间类型</th>
+                    <th>命名空间地址</th>
+                    <th>命名方式</th>
+                    <th>默认构造函数</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in plugIns)
+                {
+                    <tr>
+                        <td>@(++index)</td>
+                        <td>@item.RegName</td>
+                        <td>@item.Author</td>
+                        <td>@item.CreateDate</td>
+                        <td>@item.Description</td>
+                        <td>@item.TypeName</td>
+                        <td>@item.FileName</td>
+                        <td>@item.NamespaceType</td>
+                        <td>@item.NamespaceUri</td>
+                        <td>@item.NamingRule</td>
+                        <td>
+                            @if (!item.UseConstructor)
+                            {
+                                @:<i class="icon-ok"></i>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.11.1.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+</body>
+</html>

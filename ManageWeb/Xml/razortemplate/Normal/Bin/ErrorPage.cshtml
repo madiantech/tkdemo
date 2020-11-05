@@ -1,0 +1,36 @@
+﻿@inherits YJC.Toolkit.Razor.ListTemplatePage<TModel>
+@using System.Collections.Generic;
+@using System.Web;
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    ErrorPageException ex = (ErrorPageException)Model;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ex.PageTitle</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"><img src="@("toolkitcss/v5/commonM/images/error.jpg".AppVirutalPath())" class="center-block img-responsive"></div>
+            <div class="col-sm-9">
+                <h1 class="text-center text-danger">@ex.ErrorTitle</h1>
+                <br>
+                <p class="lead">@ex.ErrorBody</p>
+                <br>
+                @*<button class="btn btn-success btn-lg pull-right">返回之前的页面</button>*@
+            </div>
+        </div>
+    </div>
+</body>
+</html>

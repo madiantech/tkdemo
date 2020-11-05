@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>班级管理</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+			<tk:MasterDetailMetaData>
+				<tk:Master>
+					<tk:SingleXmlMetaData DataXml="Class/Class.xml"/>
+				</tk:Master>
+				<tk:Detail ListStyle="Table" IsFix="false">
+					<tk:SingleXmlMetaData DataXml="Class/ClassCourse.xml"/>
+				</tk:Detail>
+			</tk:MasterDetailMetaData>
+		</tk:MetaData>
+		<tk:Source>
+			<tk:MasterDetailDbSource>
+				<tk:MasterResolver>
+					<tk:MetaDataResolver AutoTrackField="true" AutoUpdateKey="true">
+						<tk:Scheme>
+							<tk:Tk5DataXml FileName="Class/Class.xml"/>
+						</tk:Scheme>
+					</tk:MetaDataResolver>
+				</tk:MasterResolver>
+				<tk:Detail>
+					<tk:Resolver>
+						<tk:MetaDataResolver AutoUpdateKey="true">
+							<tk:Scheme>
+								<tk:Tk5DataXml FileName="Class/ClassCourse.xml"/>
+							</tk:Scheme>
+						</tk:MetaDataResolver>
+					</tk:Resolver>
+					<tk:Relation>
+						<tk:MasterFields>ClassId</tk:MasterFields>
+						<tk:DetailFields>ClassId</tk:DetailFields>
+					</tk:Relation>
+				</tk:Detail>
+			</tk:MasterDetailDbSource>
+		</tk:Source>
+		<tk:PageMaker>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="MasterDetail">
+      </tk:RazorModuleTemplatePageMaker>
+		</tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>

@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PreserveCompilationReferences>true</PreserveCompilationReferences>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Error\**" />
+    <Content Remove="Error\**" />
+    <EmbeddedResource Remove="Error\**" />
+    <None Remove="Error\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Xml\Dup.xml" />
+    <None Remove="Xml\Post.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Xml\razortemplate\Normal\Bin\ConfigDetail.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Bin\css.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Bin\Default.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Bin\ErrorPage.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Bin\Exception.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Bin\FactoryDetail.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Bin\js.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Bin\TraceManager.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Custom\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\DetailList\pagenumber.cshtml" />
+    <None Include="Xml\razortemplate\Normal\DetailList\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\DetailStatList\pagenumber.cshtml" />
+    <None Include="Xml\razortemplate\Normal\DetailStatList\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Detail\main.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Detail\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\EasySearch\DialogTemplate.cshtml" />
+    <None Include="Xml\razortemplate\Normal\EasySearch\TreeTemplate.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Edit\main.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Edit\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\List\listmain.cshtml" />
+    <None Include="Xml\razortemplate\Normal\List\pagenumber.cshtml" />
+    <None Include="Xml\razortemplate\Normal\List\query.cshtml" />
+    <None Include="Xml\razortemplate\Normal\List\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\MultiDetail\main.cshtml" />
+    <None Include="Xml\razortemplate\Normal\MultiDetail\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\MultiEdit\main.cshtml" />
+    <None Include="Xml\razortemplate\Normal\MultiEdit\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\StatList\listmain.cshtml" />
+    <None Include="Xml\razortemplate\Normal\StatList\pagenumber.cshtml" />
+    <None Include="Xml\razortemplate\Normal\StatList\query.cshtml" />
+    <None Include="Xml\razortemplate\Normal\StatList\template.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detailattachment.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detailattachmentlist.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detaillist.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detaillistpagenumber.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detailnormal.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detailtable.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detailtablehead.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\detailtablelist.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\editattachment.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\editnormal.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\editnormaltable.cshtml" />
+    <None Include="Xml\razortemplate\Normal\TableOutput\edittable.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Tree\detailtemplate.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Tree\multidetailtemplate.cshtml" />
+    <None Include="Xml\razortemplate\Normal\Tree\template.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="YJC.Toolkit.Core" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.MetaData" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Data" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.AdoData" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Web.Common" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.WebApp" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.MsSqlClient" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.MySql" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Evaluator" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Cache" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.RedisCache" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Excel" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Razor" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Razor.Web" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Razor.Web.Common" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.Excel.Web" Version="5.6.0" />
+    <PackageReference Include="YJC.Toolkit.JWT" Version="5.6.0" />
+  </ItemGroup>
+
+</Project>

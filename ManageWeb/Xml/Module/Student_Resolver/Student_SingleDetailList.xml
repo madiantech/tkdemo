@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>学生管理（编辑是单表，详情是主从表）</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+			<tk:SingleDetailListMetaData>
+				<tk:Main>
+					<tk:SingleXmlMetaData DataXml="Student/Student.xml"/>
+				</tk:Main>
+				<tk:Detail ListStyle="Normal">
+					<tk:SingleXmlMetaData DataXml="School/School.xml"/>
+				</tk:Detail>
+				<tk:Detail ListStyle="Normal">
+					<tk:SingleXmlMetaData DataXml="Class/Class.xml"/>
+				</tk:Detail>
+			</tk:SingleDetailListMetaData>
+		</tk:MetaData>
+		<tk:Source>
+			<tk:SingleDbDetailListSource>
+				<tk:Resolver>
+					<tk:RegResolver>Student</tk:RegResolver>
+				</tk:Resolver>
+				<tk:ChildTable>
+					<tk:Resolver>
+						<tk:RegResolver>School</tk:RegResolver>
+					</tk:Resolver>
+					<tk:Relation>
+						<tk:MasterFields>SchoolId</tk:MasterFields>
+						<tk:DetailFields>SchoolId</tk:DetailFields>
+					</tk:Relation>
+				</tk:ChildTable>
+				<tk:ChildTable>
+					<tk:Resolver>
+						<tk:RegResolver>Class</tk:RegResolver>
+					</tk:Resolver>
+					<tk:Relation>
+						<tk:MasterFields>ClassId</tk:MasterFields>
+						<tk:DetailFields>ClassId</tk:DetailFields>
+					</tk:Relation>
+				</tk:ChildTable>
+			</tk:SingleDbDetailListSource>
+		</tk:Source>
+		<tk:PageMaker>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="SingleDetailList">
+            </tk:RazorModuleTemplatePageMaker>
+		</tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>

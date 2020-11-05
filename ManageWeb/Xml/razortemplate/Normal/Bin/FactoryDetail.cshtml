@@ -1,0 +1,70 @@
+﻿@inherits YJC.Toolkit.Razor.ListTemplatePage<TModel>
+@using System.Collections.Generic;
+@using System.Web;
+@using System.Text;
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    PlugInFactoryData factoryData = (PlugInFactoryData)Model;
+    var info = factoryData.FactoryInfo;
+    var plugIns = factoryData.PlugIns;
+    int index = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@(info.Description)详细信息</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap-theme.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitcss/v5/commonM/style.css".AppVirutalPath())" />
+    <style>
+        th {
+            word-break: keep-all
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fuild m10">
+        <h1>@info.Description</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>注册名</th>
+                    <th>方式</th>
+                    <th>作者</th>
+                    <th>创建时间</th>
+                    <th>描述</th>
+                    <th>对象类型</th>
+                    <th>文件</th>
+                    <th>忽略后缀</th>
+                    <th>基类名</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in plugIns)
+                {
+                    <tr>
+                        <td>@(++index)</td>
+                        <td>@item.RegName</td>
+                        <td>@item.PlugType</td>
+                        <td>@item.Author</td>
+                        <td>@item.CreateDate</td>
+                        <td>@item.Description</td>
+                        <td>@item.TypeName</td>
+                        <td>@item.FileName</td>
+                        <td>@item.Suffix</td>
+                        <td>@item.BaseClass</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.11.1.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\EasySearch.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Tk5EasySearch DataXml="CourseCate/CourseCate.xml" RegName="COURSECATE_ES" Author="FU" CreateDate="2020-11-02" Description="课程分类"/>
+</tk:Toolkit>

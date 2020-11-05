@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Table TableName="class_course">
+		<tk:TableDesc>
+			<tk:Content>课程</tk:Content>
+		</tk:TableDesc>
+		<tk:Field DataType="int" IsKey="true">
+			<tk:FieldName>id</tk:FieldName>
+			<tk:NickName>Id</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>Id</tk:Content>
+			</tk:DisplayName>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="Hidden" Order="10" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="int">
+			<tk:FieldName>class_id</tk:FieldName>
+			<tk:NickName>ClassId</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>班级Id</tk:Content>
+			</tk:DisplayName>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="Hidden" Order="20" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="int">
+			<tk:FieldName>course_id</tk:FieldName>
+			<tk:NickName>CourseId</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>课程</tk:Content>
+			</tk:DisplayName>
+			<tk:EasySearch RegName="COURSE_EASYSEARCH"/>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="EasySearch" Order="30" DefaultShow="All"/>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+	</tk:Table>
+</tk:Toolkit>

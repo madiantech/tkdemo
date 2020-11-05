@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\DataXml.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Table TableName="School">
+		<tk:TableDesc>
+			<tk:Content>学校信息</tk:Content>
+		</tk:TableDesc>
+		<tk:Field DataType="int" IsKey="true" IsEmpty="false">
+			<tk:FieldName>school_id</tk:FieldName>
+			<tk:NickName>SchoolId</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>学校Id</tk:Content>
+			</tk:DisplayName>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="Hidden" Order="10" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="string" IsEmpty="false">
+			<tk:FieldName>school_name</tk:FieldName>
+			<tk:NickName>SchoolName</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>学校名称</tk:Content>
+			</tk:DisplayName>
+			<tk:Length>128</tk:Length>
+			<tk:Layout Layout="PerLine" UnitNum="1"/>
+			<tk:Control Control="Text" Order="20" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="string">
+			<tk:FieldName>school_address</tk:FieldName>
+			<tk:NickName>SchoolAddress</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>学校地址</tk:Content>
+			</tk:DisplayName>
+			<tk:Length>128</tk:Length>
+			<tk:Layout Layout="PerLine" UnitNum="1"/>
+			<tk:Control Control="Text" Order="30" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="Date">
+			<tk:FieldName>create_date</tk:FieldName>
+			<tk:NickName>CreateDate</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>创建时间</tk:Content>
+			</tk:DisplayName>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="Hidden" Order="40" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="int">
+			<tk:FieldName>create_id</tk:FieldName>
+			<tk:NickName>CreateId</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>创建者</tk:Content>
+			</tk:DisplayName>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="Hidden" Order="50" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="Date">
+			<tk:FieldName>update_date</tk:FieldName>
+			<tk:NickName>UpdateDate</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>更新时间</tk:Content>
+			</tk:DisplayName>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="Hidden" Order="60" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+		<tk:Field DataType="int">
+			<tk:FieldName>update_id</tk:FieldName>
+			<tk:NickName>UpdateId</tk:NickName>
+			<tk:DisplayName>
+				<tk:Content>更新者</tk:Content>
+			</tk:DisplayName>
+			<tk:Layout Layout="PerUnit" UnitNum="1"/>
+			<tk:Control Control="Hidden" Order="70" DefaultShow="All"/>
+			<tk:ListDetail>
+				<tk:ListDisplay>
+					<tk:AutoDisplay/>
+				</tk:ListDisplay>
+				<tk:DetailDisplay>
+					<tk:AutoDisplay/>
+				</tk:DetailDisplay>
+			</tk:ListDetail>
+			<tk:Edit>
+				<tk:Display>
+					<tk:AutoDisplay Style="Edit"/>
+				</tk:Display>
+			</tk:Edit>
+		</tk:Field>
+	</tk:Table>
+</tk:Toolkit>

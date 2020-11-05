@@ -1,0 +1,106 @@
+﻿@inherits YJC.Toolkit.Razor.ListTemplatePage<TModel>
+@using System.Collections.Generic;
+@using System.Web;
+@using System.Text;
+@using YJC.Toolkit.Data;
+@using YJC.Toolkit.Sys;
+@using YJC.Toolkit.Web;
+@{
+    PlugInManagerData data = (PlugInManagerData)Model;
+    IEnumerable<PlugInFactoryInfo> codes = data.CodeFactories;
+    IEnumerable<PlugInFactoryInfo> xmls = data.XmlConfigs;
+}
+@section TableHeader
+{
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>名称</th>
+            <th>描述</th>
+            <th>类型</th>
+            <th>所在文件</th>
+            <th>插件数量</th>
+        </tr>
+    </thead>
+}
+@functions {
+    string CreateTableBody(IEnumerable<PlugInFactoryInfo> codes, string style)
+    {
+        StringBuilder builder = new StringBuilder();
+        int index = 0;
+        foreach (var item in codes)
+        {
+            string url = string.Format("c/plugin/C{0}/Trace?Name={1}", style, item.Name);
+            builder.Append("<tr><td>").Append(++index).Append("</td><td>")
+                .Append("<a target='_blank' href='").Append(url.AppVirutalPath())
+                .Append("'>").Append(item.Name).Append("</a></td><td>")
+                .Append(item.Description).Append("</td><td>").Append(item.TypeName)
+                .Append("</td><td>").Append(item.AssemblyName).Append("</td><td>")
+                .Append(item.Count).Append("</td></tr>").AppendLine();
+        }
+        return builder.ToString();
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统插件一览</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap.min.css".AppVirutalPath())" />
+    <link rel="stylesheet" type="text/css" href="@("toolkitjs/v5/bootstrap/css/bootstrap-theme.min.css".AppVirutalPath())" />
+    <style>
+        th {
+            word-break: keep-all
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>系统插件一览</h1>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            代码插件
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            @RenderSection("TableHeader")
+                            <tbody>
+                                @Raw(CreateTableBody(codes, "Code"))
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            配置插件
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        <table class="table table-striped">
+                            @RenderSection("TableHeader")
+                            <tbody>
+                                @Raw(CreateTableBody(xmls, "Xml"))
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="@("toolkitjs/v5/lib/jquery-1.11.1.min.js".AppVirutalPath())"></script>
+    <script type="text/javascript" src="@("toolkitjs/v5/bootstrap/js/bootstrap.min.js".AppVirutalPath())"></script>
+</body>
+</html>

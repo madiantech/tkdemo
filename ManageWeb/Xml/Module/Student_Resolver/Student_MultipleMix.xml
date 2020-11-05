@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>学生管理</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+			<tk:MultipleMetaData>
+				<tk:Master>
+					<tk:SingleXmlMetaData DataXml="Student/Student.xml"/>
+				</tk:Master>
+				<tk:OtoMTable ListStyle="Table">
+					<tk:SingleSchemaMetaData>
+						<tk:Scheme>
+							<tk:Tk5DataXml FileName="Score/Score.xml"/>
+						</tk:Scheme>
+					</tk:SingleSchemaMetaData>
+				</tk:OtoMTable>
+			</tk:MultipleMetaData>
+		</tk:MetaData>
+		<tk:Source>
+			<tk:MultipleMixDbSource>
+				<tk:Resolver>
+					<tk:RegResolver>Student</tk:RegResolver>
+				</tk:Resolver>
+				<tk:OtoMTable>
+					<tk:Resolver>
+						<tk:RegResolver>Score</tk:RegResolver>
+					</tk:Resolver>
+					<tk:Relation>
+						<tk:MasterFields>StudentId</tk:MasterFields>
+						<tk:DetailFields>StudentId</tk:DetailFields>
+					</tk:Relation>
+				</tk:OtoMTable>
+			</tk:MultipleMixDbSource>
+		</tk:Source>
+		<tk:PageMaker>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="MasterDetail">
+			</tk:RazorModuleTemplatePageMaker>
+		</tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>

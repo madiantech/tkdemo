@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>课程分类表</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+			<tk:SingleXmlMetaData DataXml="CourseCate/CourseCate.xml"/>
+		</tk:MetaData>
+		<tk:Source>
+			<tk:SingleDbTreeSource>
+				<tk:Resolver>
+					<tk:TreeMetaDataResolver AutoTrackField="true" AutoUpdateKey="true">
+						<tk:Scheme>
+							<tk:Tk5DataXml FileName="CourseCate/CourseCate.xml"/>
+						</tk:Scheme>
+					</tk:TreeMetaDataResolver>
+				</tk:Resolver>
+			</tk:SingleDbTreeSource>
+		</tk:Source>
+		<tk:PageMaker>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="SingleTreeDialog">
+				<tk:PageTemplate Style="C">
+					<tk:RazorData>
+						<tk:NormalTreeData ShowNewRootButton="true"/>
+					</tk:RazorData>
+				</tk:PageTemplate>
+			</tk:RazorModuleTemplatePageMaker>
+		</tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>

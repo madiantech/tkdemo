@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\EasySearch.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <tk:Tk5EasySearch DataXml="School/School.xml" RegName="SCHOOL_EASYSEARCH" Author="FU" CreateDate="2020-11-02" Description="选择学校"/>
+  <tk:Tk5EasySearch DataXml="Class/Class.xml" RegName="CLASS_EASYSEARCH" Author="FU" CreateDate="2020-11-02" Description="选择班级"/>
+  <tk:Tk5EasySearch DataXml="Course/Course.xml" RegName="COURSE_EASYSEARCH" Author="FU" CreateDate="2020-11-02" Description="选择课程"/>
+</tk:Toolkit>

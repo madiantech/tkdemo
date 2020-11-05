@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tk:Toolkit version="5.0" xsi:schemaLocation="http://www.qdocuments.net ..\..\schema\v5\Module.xsd" xmlns:tk="http://www.qdocuments.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<tk:Module>
+		<tk:Title>
+			<tk:Content>学生管理</tk:Content>
+		</tk:Title>
+		<tk:MetaData>
+			<tk:MultipleMDMetaData>
+				<tk:Master>
+					<tk:SingleXmlMetaData DataXml="Student/Student.xml"/>
+				</tk:Master>
+				<tk:Detail ListStyle="Table">
+					<tk:SingleXmlMetaData DataXml="Score/Score.xml"/>
+				</tk:Detail>
+			</tk:MultipleMDMetaData>
+		</tk:MetaData>
+		<tk:Source>
+			<tk:MultipleMDSource>
+				<tk:Resolver>
+					<tk:MetaDataResolver AutoTrackField="true" AutoUpdateKey="true">
+						<tk:Scheme>
+							<tk:Tk5DataXml FileName="Student/Student.xml"/>
+						</tk:Scheme>
+					</tk:MetaDataResolver>
+				</tk:Resolver>
+				<tk:ChildTable>
+					<tk:Resolver>
+						<tk:MetaDataResolver AutoTrackField="true" AutoUpdateKey="true">
+							<tk:Scheme>
+								<tk:Tk5DataXml FileName="Score/Score.xml"/>
+							</tk:Scheme>
+						</tk:MetaDataResolver>
+					</tk:Resolver>
+					<tk:Relation>
+						<tk:MasterFields>StudentId</tk:MasterFields>
+						<tk:DetailFields>StudentId</tk:DetailFields>
+					</tk:Relation>
+				</tk:ChildTable>
+			</tk:MultipleMDSource>
+		</tk:Source>
+		<tk:PageMaker>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="MasterDetail">
+			</tk:RazorModuleTemplatePageMaker>
+		</tk:PageMaker>
+	</tk:Module>
+</tk:Toolkit>
