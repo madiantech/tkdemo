@@ -31,10 +31,11 @@
 			<tk:FieldName>parent_id</tk:FieldName>
 			<tk:NickName>ParentId</tk:NickName>
 			<tk:DisplayName>
-				<tk:Content>父节点id</tk:Content>
+				<tk:Content>父节点</tk:Content>
 			</tk:DisplayName>
-			<tk:Layout Layout="PerUnit" UnitNum="1"/>
-			<tk:Control Control="Hidden" Order="20" DefaultShow="All"/>
+			<tk:EasySearch RegName="COURSECATE_ES"/>
+			<tk:Layout Layout="PerLine" UnitNum="2"/>
+			<tk:Control Control="Label" Order="20" DefaultShow="All"/>
 			<tk:ListDetail>
 				<tk:ListDisplay>
 					<tk:AutoDisplay/>
@@ -102,7 +103,7 @@
 				<tk:Content>节点名称</tk:Content>
 			</tk:DisplayName>
 			<tk:Length>64</tk:Length>
-			<tk:Layout Layout="PerUnit" UnitNum="2"/>
+			<tk:Layout Layout="PerLine" UnitNum="2"/>
 			<tk:Control Control="Text" Order="50" DefaultShow="All"/>
 			<tk:ListDetail>
 				<tk:ListDisplay>

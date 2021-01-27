@@ -34,20 +34,8 @@
 			</tk:DisplayName>
 			<tk:Length>128</tk:Length>
 			<tk:Layout Layout="PerLine" UnitNum="1"/>
-			<tk:Control Control="Text" Order="20" DefaultShow="All"/>
-			<tk:ListDetail>
-				<tk:ListDisplay>
-					<tk:AutoDisplay/>
-				</tk:ListDisplay>
-				<tk:DetailDisplay>
-					<tk:AutoDisplay/>
-				</tk:DetailDisplay>
-			</tk:ListDetail>
-			<tk:Edit>
-				<tk:Display>
-					<tk:AutoDisplay Style="Edit"/>
-				</tk:Display>
-			</tk:Edit>
+			<tk:Control Control="Hidden" Order="20" DefaultShow="All"/>
+			<tk:ListDetail Search="true"/>
 		</tk:Field>
 		<tk:Field DataType="string">
 			<tk:FieldName>school_address</tk:FieldName>
@@ -80,7 +68,7 @@
 			</tk:DisplayName>
 			<tk:Layout Layout="PerUnit" UnitNum="1"/>
 			<tk:Control Control="Hidden" Order="40" DefaultShow="All"/>
-			<tk:ListDetail>
+			<tk:ListDetail Search="true" Span="true">
 				<tk:ListDisplay>
 					<tk:AutoDisplay/>
 				</tk:ListDisplay>

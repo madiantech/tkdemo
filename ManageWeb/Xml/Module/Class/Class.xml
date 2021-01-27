@@ -39,8 +39,7 @@
 			</tk:MasterDetailDbSource>
 		</tk:Source>
 		<tk:PageMaker>
-			<tk:RazorModuleTemplatePageMaker ModuleTemplate="MasterDetail">
-      </tk:RazorModuleTemplatePageMaker>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="MasterDetail"/>
 		</tk:PageMaker>
 	</tk:Module>
 </tk:Toolkit>

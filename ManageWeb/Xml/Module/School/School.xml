@@ -16,10 +16,13 @@
 						</tk:Scheme>
 					</tk:MetaDataResolver>
 				</tk:Resolver>
+				<tk:Operators>
+					<tk:SubFuncOperators FunctionKey="School" Page="List"/>
+				</tk:Operators>
 			</tk:SingleDbSource>
 		</tk:Source>
 		<tk:PageMaker>
-			<tk:RazorModuleTemplatePageMaker ModuleTemplate="Single"/>
+			<tk:RazorModuleTemplatePageMaker ModuleTemplate="SingleDialog"/>
 		</tk:PageMaker>
 	</tk:Module>
 </tk:Toolkit>
